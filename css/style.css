@@ -68,10 +68,10 @@ main {
 
 .buttons {
     position: absolute;
-    bottom: 10%;
+    bottom: 12%;
     left: 50%;
     width: 65%;
-    transform: translate(-57%, 0);
+    transform: translate(-55%, 0);
     display: flex;
     gap: 20px;
 }
@@ -81,7 +81,7 @@ main {
     padding: 4%;
     border: 2px solid #000;
     border-radius: 5px;
-    font-size: clamp(5px, 5vw, 1rem);
+    font-size: clamp(8px, 5vw, 1rem);
     font-weight: 600;
     color: white;
     background-color: #444;
