@@ -1,6 +1,11 @@
+const pokemonImage = document.querySelector('.pokemon__image');
+
 const pokemonNumber = document.querySelector('.pokemon__number');
 
 const pokemonName = document.querySelector('.pokemon__name');
+
+const form = document.querySelector('.form');
+const input = document.querySelector('.input__search');
 
 const fetchPokemon = async (pokemon) => {
 
@@ -16,10 +21,17 @@ const renderPokemon = async (pokemon) => {
 
     const data = await fetchPokemon(pokemon);
 
+    pokemonImage.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
+
     pokemonName.innerHTML = data.name;
 
     pokemonNumber.innerHTML = data.id;
 
 }
 
-renderPokemon('pichu');
+form.addEventListener('submit', (e) => {
+    
+    e.preventDefault();
+
+    renderPokemon(input.value);
+})
